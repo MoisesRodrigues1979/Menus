@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-blur{
+    text-align: center;
+    align-content: center;
+	background: #000000;
+	padding: 18px;
+}
+
+#menu-blur ul{
+    font-family: "Chivo Mono", monospace;
+    gap: 72px;
+    display: inline-flex;
+   
+}
+
+#menu-blur ul li{
+    list-style: none;
+}
+
+#menu-blur ul li a{
+    font-size: 26px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+#menu-blur ul:hover li a{
+    color: #fd6601;
+}
+
+#menu-blur ul:hover li a:not(:hover){
+    color: white;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+#menu-glow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #252839;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+#menu-glow ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#menu-glow ul li{
+    position: relative;
+    list-style: none;
+}
+
+#menu-glow ul li a{
+    font-size: 4em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+#menu-glow ul li a::before{
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 8px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+}
+
+#menu-glow ul li a:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+}
